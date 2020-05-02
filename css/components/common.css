@@ -1,0 +1,192 @@
+
+body {
+	color: #ffffff;
+	text-transform: uppercase;
+	background-color: #3a454d;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto 45px;
+	background-color: #3a454d;
+	padding: 15px;
+}
+
+.h2,
+.card {
+	width: 100%;
+	margin: 0 auto 15px;
+}
+
+.hover-box {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+h2 {
+	display: inline-block;
+	border-bottom: 4px solid #4e5a62;
+	margin-bottom: 0px;
+	padding-bottom: 10px;
+}
+
+.h2 {
+	text-align: center;
+	margin-bottom: 35px;
+	font-size: 30px;
+	line-height: 1.4;
+	padding-top: 35px;
+}
+
+.card {
+	position: relative;
+	
+}
+
+.card:hover .hover-box {
+	opacity: 1;
+}
+
+.card .hover-box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.3);
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+.card .plus {
+	position: relative;
+	flex-grow: 1;
+}
+
+.card .plus::after,
+.card .plus::before {
+	content: '';
+	background-color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.card .plus::before {
+	width: 16px;
+	height: 2px;
+}
+
+.card .plus::after {
+	width: 2px;
+	height: 16px;
+}
+
+.card-title {
+	margin: 0;
+	padding: 15px;
+	background-color: #292f36;
+	color: #fff;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+.btn {
+	display: block;
+	vertical-align: top;
+	padding: 15px 15px;
+	border-radius: 4px;
+	color: #fff;
+	text-decoration: none;
+	border: 2px solid #ffffff;
+	max-width: 147px;
+	text-align: center;
+	font-size: 14px;
+	margin: 30px auto 0px;
+}
+
+.btn:hover {
+	background-color: #4e5a62;
+	transition: background .3s linear;
+	transform: scale(1.1);
+}
+
+@media all and (min-width: 576px) {
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.card {
+		width: calc(50% - 15px);
+	}
+
+	.card:nth-child(even) {
+		margin-right: 7.5px;
+	}
+
+	.card:nth-child(odd) {
+		margin-left: 7.5px;
+	}
+}
+
+@media all and (min-width: 768px) {
+
+	.card {
+		width: calc(33.33% - 15px);
+		margin-left: 7.5px;
+		margin-right: 7.5px;
+	}
+
+	.card-title {
+		font-size: 12px;
+	}
+
+
+	.h2 {
+		text-align: left;
+		padding-left: 7.5px;
+	}
+}
+
+@media all and (min-width: 1024px) {
+
+	.card-title {
+		font-size: 18px;
+	}
+
+	h2 {
+		border-bottom: 0px;
+		border-left: 10px solid #4e5a62;
+		font-size: 36px;
+		padding-left: 15px;
+		padding-bottom: 0px;
+	} 
+
+	.h2 {
+		padding-left: 15px;
+	}
+
+	.card {
+		width: calc(33.33% - 30px);
+		margin: 0px 15px 30px;
+	}
+
+	.card:nth-child(even) {
+		margin-right: 15px;
+	}
+
+	.card:nth-child(odd) {
+		margin-left: 15px;
+	}
+}
